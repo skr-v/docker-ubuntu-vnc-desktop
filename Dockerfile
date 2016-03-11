@@ -34,6 +34,11 @@ ADD supervisord.conf /etc/supervisor/conf.d/
 ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
 ADD efx1.zip /tmp/
 ADD efx2.zip /tmp/
+RUN apt-get install wine -y
+RUN apt-get install p7zip-full -y
+RUN mkdir /home/ubuntu/.wine/drive_c/extra
+RUN 7z x /tmp/efx1.zip -o /home/ubuntu/.wine/drive_c/extra
+RUN 7z x /tmp/efx2.zip -o /home/ubuntu/.wine/drive_c/extra
 
 EXPOSE 6080
 WORKDIR /root
