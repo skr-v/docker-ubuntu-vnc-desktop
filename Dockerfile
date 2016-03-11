@@ -32,7 +32,8 @@ ADD nginx.conf /etc/nginx/sites-enabled/default
 ADD startup.sh /
 ADD supervisord.conf /etc/supervisor/conf.d/
 ADD doro-lxde-wallpapers /usr/share/doro-lxde-wallpapers/
-ADD efx.zip /tmp/
+ADD efx1.zip /tmp/
+ADD efx2.zip /tmp/
 
 EXPOSE 6080
 WORKDIR /root
